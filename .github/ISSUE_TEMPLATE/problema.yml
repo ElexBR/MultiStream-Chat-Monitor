@@ -1,0 +1,60 @@
+name: 🐞 Relatar um problema
+description: Algo não funcionou como deveria no MCM.
+labels: ["problema"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por avisar! Tudo o que você escrever aqui é **público**: nunca coloque senhas, códigos ou dados pessoais.
+        Para dúvidas e sugestões, use as [Discussões](https://github.com/ElexBR/MultiStream-Chat-Monitor/discussions).
+  - type: dropdown
+    id: aparelho
+    attributes:
+      label: Onde aconteceu?
+      multiple: true
+      options:
+        - Android
+        - Windows
+    validations:
+      required: true
+  - type: input
+    id: versao
+    attributes:
+      label: Versão do MCM
+      description: Aparece na página Conexão, embaixo do “by ElexBR”.
+      placeholder: "0.9.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: parte
+    attributes:
+      label: Com o que foi o problema?
+      multiple: true
+      options:
+        - Twitch
+        - YouTube
+        - TikTok
+        - Overlay no OBS
+        - Eventos
+        - Instalação ou atualização
+        - Outra coisa
+    validations:
+      required: true
+  - type: textarea
+    id: aconteceu
+    attributes:
+      label: O que aconteceu?
+      description: Conte o que você fez e o que apareceu. Se tiver uma mensagem de erro, copie aqui.
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: O que você esperava que acontecesse?
+  - type: textarea
+    id: diagnostico
+    attributes:
+      label: Diagnóstico
+      description: |
+        No MCM, toque em **Config → Copiar diagnóstico** e cole aqui. Ele não leva senhas, tokens nem dados da conta, mas leva os nomes dos canais.
+      render: text
