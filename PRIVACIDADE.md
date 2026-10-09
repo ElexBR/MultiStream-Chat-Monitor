@@ -57,7 +57,7 @@ Ele mostra só o que já aparece no seu chat, que é público, e não recebe nad
 
 ## Copiar diagnóstico
 
-O botão “Copiar diagnóstico” (na Config) só faz algo quando você toca nele. Ele copia um resumo técnico para a área de transferência, e é você quem decide se manda para alguém. O resumo **não leva** senhas, tokens, cookies nem identificações internas das contas.
+O botão “Copiar diagnóstico” (em Config → Ajuda e diagnóstico) só faz algo quando você toca nele. Ele copia um resumo técnico para a área de transferência, e é você quem decide se manda para alguém. O resumo **não leva** senhas, tokens, cookies nem identificações internas das contas.
 
 ## Como apagar seus dados
 

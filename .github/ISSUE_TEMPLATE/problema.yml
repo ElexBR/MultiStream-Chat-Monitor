@@ -56,5 +56,5 @@ body:
     attributes:
       label: Diagnóstico
       description: |
-        No MCM, toque em **Config → Copiar diagnóstico** e cole aqui. Ele não leva senhas, tokens nem dados da conta, mas leva os nomes dos canais.
+        No MCM, toque em **Config → Ajuda e diagnóstico → Copiar diagnóstico** e cole aqui. Ele não leva senhas, tokens nem dados da conta, mas leva os nomes dos canais.
       render: text

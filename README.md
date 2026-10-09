@@ -62,7 +62,7 @@ O MCM não tem conta, servidor próprio, anúncios nem rastreamento, e tudo o qu
 ## 🆘 Ajuda e sugestões
 
 - **Dúvidas e sugestões:** [Discussões](https://github.com/ElexBR/MultiStream-Chat-Monitor/discussions).
-- **Algo não funcionou:** [relate um problema](https://github.com/ElexBR/MultiStream-Chat-Monitor/issues/new/choose). Antes, toque em **Config → Copiar diagnóstico** no MCM e cole o texto no relato.
+- **Algo não funcionou:** [relate um problema](https://github.com/ElexBR/MultiStream-Chat-Monitor/issues/new/choose). Antes, toque em **Config → Ajuda e diagnóstico → Copiar diagnóstico** no MCM e cole o texto no relato.
 
 Para escrever, é preciso uma conta no GitHub (gratuita). Tudo o que se escreve aqui é público: nunca coloque senhas, códigos ou dados pessoais.
 
