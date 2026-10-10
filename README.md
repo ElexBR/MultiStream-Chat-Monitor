@@ -18,6 +18,7 @@ Esses links sempre baixam a versão mais nova. As versões anteriores e as novid
 - **Overlay para o OBS:** o chat na tela da live e o **Destaque**, que mostra em tamanho grande a mensagem que você tocar.
 - **Eventos** (presentes, bits, Super Chats, inscrições, membros) numa área própria, um por vez, e uma página que guarda todos.
 - Silenciar pessoas, esconder comandos com “!” e transformar as mensagens do seu bot de alertas em eventos.
+- **MCM Avatar:** um personagem no OBS que comemora e fala os eventos num balão, com voz se você quiser. Dá para usar um personagem seu: veja [como fazer a folha do seu avatar](avatar/README.md), com o modelo para baixar.
 - Escolha de fonte, tamanho e direção do chat.
 - Continua funcionando com o app minimizado.
 
