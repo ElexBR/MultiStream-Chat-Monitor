@@ -4,7 +4,7 @@ O chat das suas lives na **Twitch**, no **YouTube** e no **TikTok** juntos, numa
 
 ## ⬇️ Baixar
 
-| Aparelho | Arquivo |
+| Dispositivo | Arquivo |
 |---|---|
 | 📱 **Android** (8.0 ou mais novo) | [MultiStream-Chat-Monitor-Android.apk](https://github.com/ElexBR/MultiStream-Chat-Monitor/releases/latest/download/MultiStream-Chat-Monitor-Android.apk) |
 | 💻 **Windows** (10 ou 11, 64 bits) | [MultiStream-Chat-Monitor-Windows.msi](https://github.com/ElexBR/MultiStream-Chat-Monitor/releases/latest/download/MultiStream-Chat-Monitor-Windows.msi) |
