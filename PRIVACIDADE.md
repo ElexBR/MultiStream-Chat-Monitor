@@ -11,7 +11,8 @@ O MCM é um app gratuito, para Android e Windows, que junta num lugar só o chat
 - Não tem anúncios, estatísticas de uso ou rastreamento.
 - Não grava registros (logs) do que você faz.
 - Nunca vê a sua senha da Twitch, do YouTube ou do TikTok.
-- Não lê seus arquivos, fotos, contatos, câmera, microfone ou localização. A única exceção é a imagem que você mesmo escolher para o seu avatar (veja “O que fica guardado”).
+- Não lê seus arquivos, fotos, contatos, câmera, microfone ou localização. As únicas exceções são os arquivos que você mesmo escolher: a imagem do seu avatar e a pontuação que você importar de outro programa (veja “O que fica guardado”).
+- Não escreve no chat. Os comandos (`!pontos`, `!lurk` e os que você criar) respondem só no seu OBS, pelo MCM Avatar ou pelo Destaque.
 
 ## O que o MCM pede
 
@@ -26,21 +27,31 @@ O MCM é um app gratuito, para Android e Windows, que junta num lugar só o chat
 
 - **Preferências:** canais, pessoas silenciadas, contas de eventos e as opções da Config (inclusive as do MCM Avatar e as frases que você escreveu para ele).
 - **Página Eventos:** os eventos pagos (presentes, bits, Super Chats, inscrições, membros), com o nome de quem mandou, a plataforma e a mensagem. Guarda até 2000 eventos, e você pode apagar um ou todos.
+  - Em cada sessão, também **quem comentou** (o nome, a plataforma e quantas mensagens a pessoa mandou). Só a sessão mais nova guarda os nomes; as antigas guardam só quantas pessoas foram.
+  - E o código das lives que aconteceram na sessão, que o MCM usa para começar uma sessão nova sozinho quando outra live começa.
+- **Pontos** (só se você ligar): de cada pessoa que participou, a plataforma, a identificação dela na plataforma, o nome, o endereço da foto de perfil, os pontos e quantas mensagens ela mandou na temporada. Também a lista de quem você tirou dos pontos.
+  - **Importar pontuação:** o arquivo que você escolher (por exemplo, o do Mix It Up) é lido só no aparelho e **nunca é guardado nem enviado**. O MCM guarda só uma “impressão digital” dele (SHA-256), para avisar se você importar o mesmo arquivo de novo.
+  - A lista de bots conhecidos (que nunca ganham pontos) vem pronta dentro do MCM.
+- **Lista 👑 Apoiadores:** o nome, a plataforma e a identificação de quem apoiou ou de quem você adicionou, e a lista anterior (a de antes da última vez que ela foi zerada).
 - **Autorização da Twitch:** guardada **criptografada**. No Android ela usa o cofre de chaves do sistema; no Windows, a proteção do seu usuário do Windows.
 - **Seu avatar:** se você escolher uma imagem própria para o MCM Avatar, o MCM guarda uma cópia dela na pasta dele. Trocar a imagem apaga a anterior. No Android, o MCM só recebe o arquivo que você escolher na janela do sistema, sem permissão para ver os outros.
 - **As mensagens do chat ficam só na memória** (as últimas 200) e somem quando você fecha o MCM.
 
 Onde ficam esses arquivos:
-- **Android:** na pasta do app, que outros apps não leem. O backup do Google, se estiver ligado no seu celular, leva só as preferências; a autorização da Twitch, a página Eventos e a imagem do seu avatar ficam de fora.
+- **Android:** na pasta do app, que outros apps não leem. O backup do Google, se estiver ligado no seu celular, leva só as preferências; a autorização da Twitch, a página Eventos, os pontos, a lista de apoiadores e a imagem do seu avatar ficam de fora.
 - **Windows:** em `%LOCALAPPDATA%\MultiStreamChatMonitor`, que só o seu usuário do Windows (e os administradores do PC) conseguem abrir.
 
 ## Com quais sites o MCM conversa
 
 Só com as plataformas que você conecta:
 
-- **Twitch** (`twitch.tv`): autorização, chat e as imagens de badges, emotes e avatares;
+- **Twitch** (`twitch.tv`): autorização, chat e as imagens de badges, emotes e avatares. Com o chat conectado, o MCM também pergunta à Twitch, uma vez por minuto, se a sua live está no ar (os pontos só contam com a live no ar);
 - **YouTube** (`youtube.com`): a página pública da live e do chat, e as imagens dos avatares e emojis;
 - **TikTok** (`tiktok.com`): a página pública da live, o chat e as imagens dos presentes, emotes e avatares. O TikTok exige um código de assinatura dele para abrir o chat. O MCM baixa esse código do próprio site do TikTok, confere se é exatamente o código esperado e o roda isolado, sem acesso aos seus dados. O TikTok entrega ao MCM uma identificação de visitante, que fica só na memória.
+
+Com o **Frankfurter** (`frankfurter.dev`), um serviço gratuito de cotação de moedas, só se os pontos estiverem ligados com “Converter Super Chats de outras moedas para reais” e chegar um Super Chat em outra moeda:
+- o MCM manda **só o código da moeda** (por exemplo, `USD`), nunca quem mandou nem o valor;
+- pergunta no máximo uma vez a cada 12 horas por moeda.
 
 E com o **GitHub** (`github.com`), para saber se há versão nova:
 - ao abrir, o MCM pergunta ao GitHub qual é a versão mais nova publicada; se houver uma, ele mostra um aviso com o botão para a página de download;
@@ -57,6 +68,8 @@ O overlay é uma pequena página que o próprio MCM serve para o OBS.
 
 Ele mostra só o que já aparece no seu chat, que é público, e não recebe nada de quem o abre.
 
+A **tela de créditos** é mais uma página do overlay, com as mesmas regras de acesso. Ela mostra os nomes da lista de apoiadores, o Top 10 dos pontos da temporada (com os pontos) e quem comentou na sessão: nomes que já apareceram no seu chat. As fontes vêm de dentro do MCM, sem baixar nada de outro site.
+
 ## MCM Avatar e a voz
 
 O MCM Avatar é um personagem numa página própria do overlay, com as mesmas regras de acesso descritas acima. Ele mostra os eventos que já aparecem no seu chat.
@@ -68,7 +81,7 @@ A voz é opcional e vem desligada. Quando você liga:
 
 ## Copiar diagnóstico
 
-O botão “Copiar diagnóstico” (em Config → Ajuda e diagnóstico) só faz algo quando você toca nele. Ele copia um resumo técnico para a área de transferência, e é você quem decide se manda para alguém. O resumo **não leva** senhas, tokens, cookies nem identificações internas das contas.
+O botão “Copiar diagnóstico” (em Config → Ajuda e diagnóstico) só faz algo quando você toca nele. Ele copia um resumo técnico para a área de transferência, e é você quem decide se manda para alguém. O resumo **não leva** senhas, tokens, cookies nem identificações internas das contas. Ele também lista os últimos problemas do próprio MCM (voz, gravação de arquivos, avatar e cotação), sem nomes nem dados de ninguém.
 
 ## Como apagar seus dados
 

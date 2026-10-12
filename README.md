@@ -19,6 +19,10 @@ Esses links sempre baixam a versão mais nova. As versões anteriores e as novid
 - **Eventos** (presentes, bits, Super Chats, inscrições, membros) numa área própria, um por vez, e uma página que guarda todos.
 - Silenciar pessoas, esconder comandos com “!” e transformar as mensagens do seu bot de alertas em eventos.
 - **MCM Avatar:** um personagem no OBS que comemora e fala os eventos num balão, com voz se você quiser. Dá para usar um personagem seu: veja [como fazer a folha do seu avatar](avatar/README.md), com o modelo para baixar.
+- **Pontos e rank** para quem participa da live (por mensagem, presença, papel e apoios), com importação da pontuação do Mix It Up.
+- **Comandos** como `!pontos`, `!lurk` e os seus, respondidos no OBS pelo MCM Avatar ou pelo Destaque (o MCM nunca escreve no chat).
+- **Tela de créditos** para o OBS, com os apoiadores, o Top 10 e quem comentou.
+- **Testes sem live:** mensagens e eventos de mentira para ver tudo funcionando antes de entrar ao vivo.
 - Escolha de fonte, tamanho e direção do chat.
 - Continua funcionando com o app minimizado.
 
