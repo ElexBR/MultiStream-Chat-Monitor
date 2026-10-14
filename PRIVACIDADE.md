@@ -11,8 +11,8 @@ O MCM é um app gratuito, para Android e Windows, que junta num lugar só o chat
 - Não tem anúncios, estatísticas de uso ou rastreamento.
 - Não grava registros (logs) do que você faz.
 - Nunca vê a sua senha da Twitch, do YouTube ou do TikTok.
-- Não lê seus arquivos, fotos, contatos, câmera, microfone ou localização. As únicas exceções são os arquivos que você mesmo escolher: a imagem do seu avatar e a pontuação que você importar de outro programa (veja “O que fica guardado”).
-- Não escreve no chat. Os comandos (`!pontos`, `!lurk` e os que você criar) respondem só no seu OBS, pelo MCM Avatar ou pelo Destaque.
+- Não lê seus arquivos, fotos, contatos, câmera, microfone ou localização. As únicas exceções são os arquivos que você mesmo escolher: a imagem do seu avatar, a pontuação que você importar de outro programa, os sons que você escolher para os comandos e o arquivo do 📦 Exportar e importar (veja “O que fica guardado”).
+- Não escreve no chat. Os comandos (`!pontos`, `!lurk` e os que você criar) respondem só no seu OBS, pelo MCM Avatar e com os sons que você escolher.
 
 ## O que o MCM pede
 
@@ -21,11 +21,11 @@ O MCM é um app gratuito, para Android e Windows, que junta num lugar só o chat
 - **Permissões no Android:**
   - **Internet**, para ler os chats;
   - **serviço em primeiro plano e notificações**, para os chats continuarem ligados com o app minimizado (é a notificação fixa do MCM).
-- **Voz do MCM Avatar:** o MCM usa o mecanismo de voz que já vem no aparelho (no Android, o do Google ou o do fabricante; no Windows, as vozes do Windows). Isso não é uma permissão.
+- **Voz do MCM Avatar e 🎙️ Voz (TTS):** o MCM usa o mecanismo de voz que já vem no aparelho (no Android, o do Google ou o do fabricante; no Windows, as vozes do Windows). Isso não é uma permissão.
 
 ## O que fica guardado no seu aparelho
 
-- **Preferências:** canais, pessoas silenciadas, contas de eventos e as opções da Config (inclusive as do MCM Avatar e as frases que você escreveu para ele).
+- **Preferências:** canais, pessoas silenciadas, contas de eventos e as opções da Config (inclusive as do MCM Avatar e as frases que você escreveu para ele, e os comandos, os áudios e os timers).
 - **Página Eventos:** os eventos pagos (presentes, bits, Super Chats, inscrições, membros), com o nome de quem mandou, a plataforma e a mensagem. Guarda até 2000 eventos, e você pode apagar um ou todos.
   - Em cada sessão, também **quem comentou** (o nome, a plataforma e quantas mensagens a pessoa mandou). Só a sessão mais nova guarda os nomes; as antigas guardam só quantas pessoas foram.
   - E o código das lives que aconteceram na sessão, que o MCM usa para começar uma sessão nova sozinho quando outra live começa.
@@ -33,6 +33,7 @@ O MCM é um app gratuito, para Android e Windows, que junta num lugar só o chat
   - **Importar pontuação:** o arquivo que você escolher (por exemplo, o do Mix It Up) é lido só no aparelho e **nunca é guardado nem enviado**. O MCM guarda só uma “impressão digital” dele (SHA-256), para avisar se você importar o mesmo arquivo de novo.
   - A lista de bots conhecidos (que nunca ganham pontos) vem pronta dentro do MCM.
 - **Lista 👑 Apoiadores:** o nome, a plataforma e a identificação de quem apoiou ou de quem você adicionou, e a lista anterior (a de antes da última vez que ela foi zerada).
+- **Sons dos comandos e dos alertas:** o MCM guarda só o nome e onde está cada arquivo de som (MP3 ou WAV) que você escolher, nunca uma cópia, e lê o arquivo na hora de tocar. No Android, ele recebe só a permissão de ler de novo os arquivos que você escolheu, sem ver os outros.
 - **Autorização da Twitch:** guardada **criptografada**. No Android ela usa o cofre de chaves do sistema; no Windows, a proteção do seu usuário do Windows.
 - **Seu avatar:** se você escolher uma imagem própria para o MCM Avatar, o MCM guarda uma cópia dela na pasta dele. Trocar a imagem apaga a anterior. No Android, o MCM só recebe o arquivo que você escolher na janela do sistema, sem permissão para ver os outros.
 - **As mensagens do chat ficam só na memória** (as últimas 200) e somem quando você fecha o MCM.
@@ -40,6 +41,10 @@ O MCM é um app gratuito, para Android e Windows, que junta num lugar só o chat
 Onde ficam esses arquivos:
 - **Android:** na pasta do app, que outros apps não leem. O backup do Google, se estiver ligado no seu celular, leva só as preferências; a autorização da Twitch, a página Eventos, os pontos, a lista de apoiadores e a imagem do seu avatar ficam de fora.
 - **Windows:** em `%LOCALAPPDATA%\MultiStreamChatMonitor`, que só o seu usuário do Windows (e os administradores do PC) conseguem abrir.
+
+## 📦 Exportar e importar
+
+O MCM só cria o arquivo quando você toca em Exportar, e ele fica onde você escolher salvar. Ele leva só as partes que você marcar; os pontos, os apoiadores, os silenciados e a página Eventos têm nomes e identificações de pessoas do chat. Nunca vão nele a autorização da Twitch nem a voz. O MCM não manda esse arquivo para lugar nenhum, e importar lê o arquivo só no aparelho.
 
 ## Com quais sites o MCM conversa
 
@@ -68,6 +73,8 @@ O overlay é uma pequena página que o próprio MCM serve para o OBS.
 
 Ele mostra só o que já aparece no seu chat, que é público, e não recebe nada de quem o abre.
 
+O **overlay de som** é mais uma página do overlay, com as mesmas regras de acesso. Ela toca os sons dos comandos que você mandou para o OBS; o som que está tocando fica só na memória do MCM.
+
 A **tela de créditos** é mais uma página do overlay, com as mesmas regras de acesso. Ela mostra os nomes da lista de apoiadores, o Top 10 dos pontos da temporada (com os pontos) e quem comentou na sessão: nomes que já apareceram no seu chat. As fontes vêm de dentro do MCM, sem baixar nada de outro site.
 
 ## MCM Avatar e a voz
@@ -76,12 +83,12 @@ O MCM Avatar é um personagem numa página própria do overlay, com as mesmas re
 
 A voz é opcional e vem desligada. Quando você liga:
 - ela é feita pelo mecanismo de voz **do próprio aparelho**, e o MCM só usa vozes que funcionam **sem internet**;
-- o texto que vira voz (o nome de quem mandou o evento, o evento e, só se você ligar essa opção, o que a pessoa escreveu) fica dentro do aparelho;
+- o texto que vira voz (o nome de quem mandou o evento, o evento, as respostas dos comandos, os timers, o que a ação 🎙️ Voz (TTS) fala e o que a pessoa escreveu, este só se você ligar essa opção, o comando !ler ou um comando com {mensagem}) fica dentro do aparelho;
 - o áudio fica só na memória. No Android, o mecanismo de voz grava um arquivo temporário na pasta do app, que o MCM apaga na hora.
 
 ## Copiar diagnóstico
 
-O botão “Copiar diagnóstico” (em Config → Ajuda e diagnóstico) só faz algo quando você toca nele. Ele copia um resumo técnico para a área de transferência, e é você quem decide se manda para alguém. O resumo **não leva** senhas, tokens, cookies nem identificações internas das contas. Ele também lista os últimos problemas do próprio MCM (voz, gravação de arquivos, avatar e cotação), sem nomes nem dados de ninguém.
+O botão “Copiar diagnóstico” (em Config → Ajuda e diagnóstico) só faz algo quando você toca nele. Ele copia um resumo técnico para a área de transferência, e é você quem decide se manda para alguém. O resumo **não leva** senhas, tokens, cookies nem identificações internas das contas. Ele também lista os últimos problemas do próprio MCM (voz, gravação de arquivos, avatar, cotação, sons e fila), sem nomes nem dados de ninguém.
 
 ## Como apagar seus dados
 
