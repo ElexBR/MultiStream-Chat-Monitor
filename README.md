@@ -15,13 +15,16 @@ Esses links sempre baixam a versão mais nova. As versões anteriores e as novid
 
 - Junta o chat da **Twitch**, do **YouTube** e do **TikTok** numa lista só, com avatares, badges e emotes.
 - **YouTube e TikTok sem conta:** basta digitar o @ do canal. Na **Twitch**, você autoriza na própria página da Twitch, e o MCM só consegue **ler** o chat.
-- **Overlay para o OBS:** o chat na tela da live, o MCM Avatar, o som dos comandos e a tela de créditos.
-- **Eventos** (presentes, bits, Super Chats, inscrições, membros) numa área própria, um por vez, e uma página que guarda todos.
-- Silenciar pessoas, esconder comandos com “!” e transformar as mensagens do seu bot de alertas em eventos.
+- **Overlay para o OBS:** o chat na tela da live, o MCM Avatar, os alertas, os sons, as metas, o rank, a Maratona e a tela de créditos, cada um numa fonte ou todos juntos numa **🎬 Cena MCM**, com um endereço só.
+- **Alertas** (seguidores, inscrições, membros, presentes, bits, Super Chats, gorjetas, raids) numa área própria, um por vez, com som, voz, **variações pelo valor** e o **Overlay de Alertas** para o OBS, e uma página que guarda todos.
+- **StreamElements:** os seguidores da Twitch, os inscritos novos do YouTube e as gorjetas (LivePix e outras) chegam ao MCM.
+- Silenciar pessoas e esconder comandos com “!”.
 - **MCM Avatar:** um personagem no OBS que comemora e fala os eventos num balão, com voz se você quiser. Dá para usar um personagem seu: veja [como fazer a folha do seu avatar](avatar/README.md), com o modelo para baixar.
-- **Pontos e rank** para quem participa da live (por mensagem, presença, papel e apoios), com importação da pontuação do Mix It Up.
+- **Pontos e rank** para quem participa da live (por mensagem, presença, papel e apoios), com importação da pontuação do Mix It Up, e **temporadas com prêmios** para o Top 10.
 - **Comandos** como `!pontos`, `!lurk`, `!ler` e os seus, com som e resposta falada pelo MCM Avatar no OBS (o MCM nunca escreve no chat). E mais os **Áudios**, para os memes, e os **Timers**, com avisos durante a live.
 - **Tela de créditos** para o OBS, com os apoiadores, o Top 10 e quem comentou.
+- **📊 Metas**, **Overlay do Rank** e **⏱️ Maratona MCM** (subathon) para o OBS, que também podem aparecer na página Chat.
+- **🪟 Chat sobre o jogo** (Windows): o chat numa janela transparente por cima do jogo, para quem tem um monitor só.
 - **Testes sem live:** mensagens e eventos de mentira para ver tudo funcionando antes de entrar ao vivo.
 - **📦 Exportar e importar** a configuração para outro aparelho.
 - Escolha de fonte, tamanho e direção do chat.
@@ -71,6 +74,10 @@ O MCM não tem conta, servidor próprio, anúncios nem rastreamento, e tudo o qu
 - **Algo não funcionou:** [relate um problema](https://github.com/ElexBR/MultiStream-Chat-Monitor/issues/new/choose). Antes, toque em **Config → Ajuda e diagnóstico → Copiar diagnóstico** no MCM e cole o texto no relato.
 
 Para escrever, é preciso uma conta no GitHub (gratuita). Tudo o que se escreve aqui é público: nunca coloque senhas, códigos ou dados pessoais.
+
+## 🎨 Créditos
+
+- Ícones da gorjeta (o cofrinho e as notas): [Piggy bank icons created by Magnific - Flaticon](https://www.flaticon.com/free-icons/piggy-bank "piggy bank icons") e [Business and finance icons created by Magnific - Flaticon](https://www.flaticon.com/free-icons/business-and-finance "business and finance icons").
 
 ## 💚 Apoie
 
