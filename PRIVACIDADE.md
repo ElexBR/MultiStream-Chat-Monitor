@@ -11,8 +11,8 @@ O MCM é um app gratuito, para Android e Windows, que junta num lugar só o chat
 - Não tem anúncios, estatísticas de uso ou rastreamento.
 - Não grava registros (logs) do que você faz.
 - Nunca vê a sua senha da Twitch, do YouTube ou do TikTok.
-- Não lê seus arquivos, fotos, contatos, câmera, microfone ou localização. As únicas exceções são os arquivos que você mesmo escolher: a imagem do seu avatar, a pontuação que você importar de outro programa, os sons que você escolher para os comandos e os alertas, as imagens e vídeos dos alertas e o arquivo do 📦 Exportar e importar (veja “O que fica guardado”).
-- Não escreve no chat. Os comandos (`!pontos`, `!lurk` e os que você criar) respondem só no seu OBS e no aparelho, pelo MCM Avatar, pela voz do aparelho e com os sons que você escolher.
+- Não lê seus arquivos, fotos, contatos, câmera, microfone ou localização. As únicas exceções são os arquivos e a pasta que você mesmo escolher: a imagem do seu avatar, a pontuação que você importar de outro programa, os sons que você escolher para os comandos e os alertas, as imagens e vídeos dos alertas, o arquivo do 📦 Exportar e a pasta do 🕒 Backup automático (veja “O que fica guardado” e “📦 Backup, Exportar e Importar”).
+- Não escreve no chat da Twitch, do YouTube nem do TikTok. Os comandos (`!pontos`, `!lurk` e os que você criar) e os timers respondem só no seu OBS e no aparelho: pelo MCM Avatar, pela voz do aparelho, com os sons que você escolher e, se você quiser, como uma mensagem do “MCM” no chat do app e no overlay do chat.
 
 ## O que o MCM pede
 
@@ -26,7 +26,7 @@ O MCM é um app gratuito, para Android e Windows, que junta num lugar só o chat
 
 ## O que fica guardado no seu aparelho
 
-- **Preferências:** canais, pessoas silenciadas e as opções da Config (inclusive as do MCM Avatar, as frases dos alertas, os comandos, os áudios, os timers, as metas, a Maratona, as cenas e o 🪟 Chat sobre o jogo).
+- **Preferências:** canais, pessoas silenciadas e as opções da Config (inclusive as do MCM Avatar, as frases dos alertas, os comandos, os áudios, os timers, as metas, a Maratona, as cenas, o estilo do chat, o 💎 Filtro de Chat VIP, o 🪟 Chat sobre o jogo e, no 🕒 Backup automático, a pasta escolhida e a data do último backup).
 - **Página Eventos:** os eventos (presentes, bits, Super Chats, gorjetas, inscrições, membros, seguidores, raids e compartilhamentos), com o nome de quem mandou, a plataforma e a mensagem. Guarda até 2000 eventos, e você pode apagar um ou todos.
   - Em cada sessão, também **quem comentou** (o nome, a plataforma e quantas mensagens a pessoa mandou). Só a sessão mais nova guarda os nomes; as antigas guardam só quantas pessoas foram.
   - E o código das lives que aconteceram na sessão, que o MCM usa para começar uma sessão nova sozinho quando outra live começa.
@@ -44,9 +44,15 @@ Onde ficam esses arquivos:
 - **Android:** na pasta do app, que outros apps não leem. O backup do Google, se estiver ligado no seu celular, leva só as preferências e os números das metas e da Maratona; a autorização da Twitch, os códigos das 🔗 Integrações, a página Eventos, os pontos, a lista de apoiadores e a imagem do seu avatar ficam de fora.
 - **Windows:** em `%LOCALAPPDATA%\MultiStreamChatMonitor`, que só o seu usuário do Windows (e os administradores do PC) conseguem abrir.
 
-## 📦 Exportar e importar
+## 📦 Backup, Exportar e Importar
 
 O MCM só cria o arquivo quando você toca em Exportar, e ele fica onde você escolher salvar. Ele leva só as partes que você marcar; os pontos, os apoiadores, os silenciados e a página Eventos têm nomes e identificações de pessoas do chat. Nunca vão nele a autorização da Twitch, os códigos das 🔗 Integrações nem a voz. O MCM não manda esse arquivo para lugar nenhum, e importar lê o arquivo só no aparelho.
+
+O **🕒 Backup automático** vem desligado. Quando você escolhe uma pasta e quando fazer:
+- o MCM grava nela, sozinho, o mesmo arquivo do Exportar com todas as partes (com os nomes do chat e a imagem do seu avatar, e sem a autorização da Twitch, os códigos e a voz);
+- ele guarda os 10 backups mais novos e apaga só os mais antigos dele (os arquivos `MCM-backup-…`), nunca outro arquivo da pasta;
+- no Android, a pasta é escolhida na janela do próprio sistema, e o MCM recebe só a permissão de gravar nela, sem ver as outras pastas;
+- se a pasta for sincronizada com uma nuvem (OneDrive, Google Drive…), os backups vão junto para ela pelo serviço que você usa. O MCM não manda nada para a internet.
 
 ## Com quais sites o MCM conversa
 
@@ -80,7 +86,7 @@ O **overlay de som** é mais uma página do overlay, com as mesmas regras de ace
 
 O **Overlay de Alertas**, as **📊 Metas**, o **Overlay do Rank** (o Top da temporada, com os pontos) e a **⏱️ Maratona MCM** são mais páginas do overlay, com as mesmas regras de acesso. O Overlay de Alertas mostra a imagem que você escolheu (ou a foto de quem mandou) e o alerta que já chegou ao MCM. A **🎬 Cena MCM** é uma página que junta essas mesmas páginas num endereço só, sem nada a mais.
 
-A **tela de créditos** é mais uma página do overlay, com as mesmas regras de acesso. Ela mostra os nomes da lista de apoiadores, o Top 10 dos pontos da temporada (com os pontos) e quem comentou na sessão: nomes que já apareceram no seu chat. As fontes vêm de dentro do MCM, sem baixar nada de outro site.
+Os **créditos** (a cena 🎞️ Créditos da 🎬 Cena MCM) são mais uma página do overlay, com as mesmas regras de acesso. Ela mostra os nomes da lista de apoiadores, o Top 10 dos pontos da temporada (com os pontos) e quem comentou na sessão: nomes que já apareceram no seu chat. As fontes vêm de dentro do MCM, sem baixar nada de outro site.
 
 ## MCM Avatar e a voz
 
@@ -88,7 +94,7 @@ O MCM Avatar é um personagem numa página própria do overlay, com as mesmas re
 
 A voz é opcional e vem desligada. Quando você liga:
 - ela é feita pelo mecanismo de voz **do próprio aparelho**, e o MCM só usa vozes que funcionam **sem internet**;
-- o texto que vira voz (o nome de quem mandou o alerta, o alerta, as respostas dos comandos, os timers, o que a ação 🎙️ Voz (TTS) fala e o que a pessoa escreveu, este só se você ligar o 🎙️ TTS com a mensagem no grupo de alertas, o comando !ler ou um comando com {mensagem}) fica dentro do aparelho;
+- o texto que vira voz (o nome de quem mandou o alerta, o alerta, as respostas dos comandos, os timers, o que a ação 🎙️ Voz (TTS) fala e o que a pessoa escreveu, este só se você ligar o 🎙️ TTS com a mensagem no grupo de alertas, o comando !ler ou um comando com {mensagem}, ou tocar numa mensagem para ela ser lida) fica dentro do aparelho;
 - o áudio fica só na memória. No Android, o mecanismo de voz grava um arquivo temporário na pasta do app, que o MCM apaga na hora.
 
 ## 🪟 Chat sobre o jogo (Windows)
@@ -97,7 +103,7 @@ Com o 🪟 Chat sobre o jogo ligado, o MCM registra no Windows só os dois atalh
 
 ## Copiar diagnóstico
 
-O botão “Copiar diagnóstico” (em Config → Ajuda e diagnóstico) só faz algo quando você toca nele. Ele copia um resumo técnico para a área de transferência, e é você quem decide se manda para alguém. O resumo **não leva** senhas, tokens, cookies nem identificações internas das contas. Ele também lista os últimos problemas do próprio MCM (voz, gravação de arquivos, avatar, cotação, sons, imagens dos alertas e fila), sem nomes nem dados de ninguém.
+O botão “Copiar diagnóstico” (em Config → Ajuda e diagnóstico) só faz algo quando você toca nele. Ele copia um resumo técnico para a área de transferência, e é você quem decide se manda para alguém. O resumo **não leva** senhas, tokens, cookies nem identificações internas das contas. Ele também lista os últimos problemas do próprio MCM (voz, gravação de arquivos, avatar, cotação, sons, imagens dos alertas, fila e backup automático), sem nomes nem dados de ninguém.
 
 ## Como apagar seus dados
 
